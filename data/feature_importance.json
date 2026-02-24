@@ -1,0 +1,48 @@
+{
+  "2014": {
+    "Linear": [
+      { "feature_name": "Retention Rate", "importance_value": 0.285 },
+      { "feature_name": "Student-Faculty Ratio", "importance_value": 0.215 },
+      { "feature_name": "Spending Per Student", "importance_value": 0.185 },
+      { "feature_name": "Pell Percentage", "importance_value": 0.165 },
+      { "feature_name": "Admission Rate", "importance_value": 0.150 }
+    ],
+    "RandomForest": [
+      { "feature_name": "Retention Rate", "importance_value": 0.320 },
+      { "feature_name": "Spending Per Student", "importance_value": 0.210 },
+      { "feature_name": "Student-Faculty Ratio", "importance_value": 0.190 },
+      { "feature_name": "Pell Percentage", "importance_value": 0.155 },
+      { "feature_name": "Admission Rate", "importance_value": 0.125 }
+    ],
+    "GradientBoosting": [
+      { "feature_name": "Retention Rate", "importance_value": 0.305 },
+      { "feature_name": "Spending Per Student", "importance_value": 0.220 },
+      { "feature_name": "Student-Faculty Ratio", "importance_value": 0.205 },
+      { "feature_name": "Pell Percentage", "importance_value": 0.170 },
+      { "feature_name": "Admission Rate", "importance_value": 0.100 }
+    ]
+  },
+  "2023": {
+    "Linear": [
+      { "feature_name": "Retention Rate", "importance_value": 0.290 },
+      { "feature_name": "Spending Per Student", "importance_value": 0.210 },
+      { "feature_name": "Student-Faculty Ratio", "importance_value": 0.200 },
+      { "feature_name": "Pell Percentage", "importance_value": 0.160 },
+      { "feature_name": "Admission Rate", "importance_value": 0.140 }
+    ],
+    "RandomForest": [
+      { "feature_name": "Retention Rate", "importance_value": 0.330 },
+      { "feature_name": "Spending Per Student", "importance_value": 0.225 },
+      { "feature_name": "Student-Faculty Ratio", "importance_value": 0.185 },
+      { "feature_name": "Pell Percentage", "importance_value": 0.150 },
+      { "feature_name": "Admission Rate", "importance_value": 0.110 }
+    ],
+    "GradientBoosting": [
+      { "feature_name": "Retention Rate", "importance_value": 0.315 },
+      { "feature_name": "Spending Per Student", "importance_value": 0.235 },
+      { "feature_name": "Student-Faculty Ratio", "importance_value": 0.195 },
+      { "feature_name": "Pell Percentage", "importance_value": 0.165 },
+      { "feature_name": "Admission Rate", "importance_value": 0.090 }
+    ]
+  }
+}

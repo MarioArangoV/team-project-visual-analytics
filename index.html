@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduation Risk Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="top-bar">
+      <h1 class="title">Institutional Dropout / Graduation Risk Explorer</h1>
+      <div class="controls">
+        <div class="control-group">
+          <label for="year-select">Year:</label>
+          <select id="year-select"></select>
+        </div>
+        <div class="control-group">
+          <label for="model-select">Model:</label>
+          <select id="model-select">
+            <option value="Linear">Linear Regression</option>
+            <option value="RandomForest" selected>Random Forest</option>
+            <option value="GradientBoosting">Gradient Boosting</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="outcome-toggle">Outcome:</label>
+          <select id="outcome-toggle">
+            <option value="grad_rate" selected>Graduation Rate</option>
+            <option value="risk_category">Risk Category</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <aside class="left-sidebar">
+        <div class="filter-section">
+          <h3>Filters</h3>
+          
+          <div class="filter-group">
+            <label>Sector:</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="sector" value="Public" checked> Public</label>
+              <label><input type="checkbox" name="sector" value="Private nonprofit" checked> Private Nonprofit</label>
+              <label><input type="checkbox" name="sector" value="For-profit" checked> For-profit</label>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label for="state-select">State:</label>
+            <select id="state-select">
+              <option value="">All States</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label>School Size:</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="size" value="Small" checked> Small</label>
+              <label><input type="checkbox" name="size" value="Medium" checked> Medium</label>
+              <label><input type="checkbox" name="size" value="Large" checked> Large</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="whatif-section" id="whatif-section" style="display: none;">
+          <h3>What-If Scenario</h3>
+          <div id="whatif-content"></div>
+        </div>
+      </aside>
+
+      <main class="canvas">
+        <div class="canvas-row">
+          <div class="canvas-column left-column">
+            <h2>U.S. Institutions Map</h2>
+            <svg id="map-svg" width="100%" height="500"></svg>
+          </div>
+          <div class="canvas-column right-column">
+            <h2>Feature Importance</h2>
+            <svg id="importance-svg" width="100%" height="500"></svg>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="profile-section" id="profile-section" style="display: none;">
+      <div class="profile-header">
+        <h3 id="profile-name"></h3>
+        <div id="profile-info"></div>
+      </div>
+      <div class="profile-comparison">
+        <h4>Actual vs Predicted</h4>
+        <svg id="comparison-svg" width="100%" height="100"></svg>
+      </div>
+      <div class="profile-trend">
+        <h4>10-Year Trend</h4>
+        <svg id="trend-svg" width="100%" height="80"></svg>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
